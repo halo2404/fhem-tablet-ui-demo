@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="widget_base_width" content="83">
+    <meta name="widget_base_height" content="86">
+    <meta name="gridster_cols" content="15">
+    <meta name="gridster_rows" content="9">
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="gridster_disable" content="0">
+    <meta name="widget_margin" content="1">
+    <meta name="longpoll" content="1">
+    <meta name="debug" content="2">
+
+    <link rel="stylesheet" href="/fhem/tablet/lib/jquery.gridster.min.css"/>
+    <link rel="stylesheet" href="/fhem/tablet/css/fhem-tablet-ui.css"/>
+    <link rel="stylesheet" href="/fhem/tablet/lib/font-awesome.min.css"/>
+    <link rel="stylesheet" href="/fhem/tablet/lib/jquery.toast.min.css"/>
+    <link rel="stylesheet" href="/fhem/tablet/css/fhem-tablet-ui-wdtimer.css"/>
+
+    <!-- define your personal style here, it wont be overwritten  -->
+    <!-- link rel="stylesheet" href="/fhem/tablet/css/fhem-green-ui.css" / -->
+    <link rel="stylesheet" href="/fhem/tablet/lib/powerange.min.css"/>
+    <link rel="stylesheet" href="/fhem/tablet/lib/openautomation.css"/>
+    <link rel="stylesheet" href="/fhem/tablet/eigenefonts/gk/style.css">
+    <link rel="stylesheet" href="./css/wopr.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/own.css">
+
+
+    <script src="lib/jquery.toast.min.js"></script>
+    <script src="lib/jquery.gridster.min.js"></script>
+    <script src="js/fhem-tablet-ui.js" defer></script>
+
+    <title>Haussteuerung</title>
+</head>
+<body>
+<div class="gridster">
+    <ul>
+        <li data-row="1" data-col="1" data-sizex="1" data-sizey="9">
+            <header>
+                <div data-type="label" class="medium orange">Menu</div>
+            </header>
+            <div class="cell">
+                <div data-type="pagebutton" data-url="#1_index.html" data-load="#1_index"
+                     data-off-background-color="transparent"
+                     data-off-color="#606060" data-on-background-color="#606060" data-on-color="#222222"
+                     data-active-pattern="(.*/||.*index.html||.*#1_index.html)"
+                     data-icon="fa-home" class="default top-space"></div>
+                <div data-type="pagebutton" data-url="#1_etagen.html" data-load="#1_etagen"
+                     data-off-background-color="transparent"
+                     data-off-color="#606060" data-on-background-color="#606060" data-on-color="#222222"
+                     data-active-pattern="(.*#1_etagen.html||.*#2_etage_.*.html||.*#3_rooms_.*.html)"
+                     data-icon="oa-control_building_s_all" class="top-space"></div>
+                <div data-type="pagebutton" data-url="#1_light.html" data-load="#1_light"
+                     data-off-background-color="transparent" data-off-color="#606060" data-on-background-color="#606060"
+                     data-on-color="#222222" data-active-pattern="(.*#1_light.html||.*#2_light_etage_.*.html)"
+                     data-icon="fa-lightbulb-o" class="top-space"></div>
+                <div data-type="pagebutton" data-url="#1_heating.html" data-load="#1_heating"
+                     data-off-background-color="transparent" data-off-color="#606060" data-on-background-color="#606060"
+                     data-on-color="#222222"
+                     data-active-pattern="(.*#1_heating.html||.*#2_heating_etage_.*.html)"
+                     data-icon="oa-sani_heating" class="top-space"></div>
+                <div data-type="pagebutton" data-url="#1_rollaeden.html" data-load="#1_rollaeden"
+                     data-off-background-color="transparent" data-off-color="#606060" data-on-background-color="#606060"
+                     data-on-color="#222222" data-active-pattern="(.*#1_rollaeden.html||.*#2_rollaeden_etage_.*.html)"
+                     data-icon="oa-fts_shutter_50" class="top-space"></div>
+                <div data-type="pagebutton" data-url="#1_multimedia.html" data-load="#1_multimedia"
+                     data-off-background-color="transparent" data-off-color="#606060" data-on-background-color="#606060"
+                     data-on-color="#222222" data-active-pattern="(.*#1_multimedia.html||.*#2_multimedia_.*.html)"
+                     data-icon="fa-music" class="prefetch top-space"></div>
+                <div data-type="pagebutton" data-url="#1_phone.html" data-load="#1_phone"
+                     data-off-background-color="transparent" data-off-color="#606060" data-on-background-color="#606060"
+                     data-on-color="#222222" data-active-pattern=".*#1_phone.html" data-icon="fa-phone"
+                     class="top-space"></div>
+                <div data-type="pagebutton" data-url="#1_wetter.html" data-load="#1_wetter"
+                     data-off-background-color="transparent" data-off-color="#606060" data-on-background-color="#606060"
+                     data-on-color="#222222" data-active-pattern="(.*#1_wetter.html||.*#2_wetter_.*.html)"
+                     data-icon="oa-weather_cloudy" class="top-space"></div>
+                <div data-type="pagebutton" data-url="#1_sonstiges.html" data-load="#1_sonstiges"
+                     data-off-background-color="transparent" data-off-color="#606060" data-on-background-color="#606060"
+                     data-on-color="#222222" data-active-pattern="(.*#1_sonstiges.html||.*#2_sonstiges_.*.html)"
+                     data-icon="oa-edit_settings" class="top-space"></div>
+                <div class="absolute bottom bottom-space-2x">
+                    <div data-type="clock" data-format="H:i" class="large"></div>
+                    <div data-type="clock" data-format="d.n.Y" class="small"></div>
+                </div>
+            </div>
+        </li>
+        <li data-row="1" data-col="2" data-sizex="14" data-sizey="9">
+            <div class="page" id="1_index"></div>
+            <div class="page" id="1_etagen"></div>
+            <div class="page" id="1_light"></div>
+            <div class="page" id="1_heating"></div>
+            <div class="page" id="1_rollaeden"></div>
+            <div class="page" id="1_multimedia"></div>
+            <div class="page" id="1_phone"></div>
+            <div class="page" id="1_wetter"></div>
+            <div class="page" id="1_sonstiges"></div>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

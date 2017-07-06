@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+<div class="page" id="etage_au">
+    <div class="gridster">
+        <ul>
+            <li data-row="1" data-col="2" data-sizex="1" data-sizey="9">
+                <header>
+                    <div data-type="label" class="medium orange">Außen</div>
+                </header>
+                <div class="cell">
+                    <div data-type="pagebutton" data-url="#3_rooms_au_garage.html" data-load="#rooms_au_garage"
+                         data-off-background-color="transparent" data-off-color="#606060"
+                         data-on-background-color="#606060" data-on-color="#222222"
+                         data-active-pattern="(.*/||.*1_etagen.html||.*#2_etage_au.html||.*#3_rooms_au_garage.html)"
+                         data-icon="oa-car" class="default top-space"></div>
+                    <div data-type="label" class="darker">Garage</div>
+
+                    <div data-type="pagebutton" data-url="#3_rooms_au_garten.html" data-load="#rooms_au_garten"
+                         data-off-background-color="transparent" data-off-color="#606060"
+                         data-on-background-color="#606060" data-on-color="#222222"
+                         data-active-pattern=".*#3_rooms_au_garten.html" data-icon="oa-scene_garden"
+                         class="prefetch top-space"></div>
+                    <div data-type="label" class="darker">Garten</div>
+
+                    <div data-type="pagebutton" data-url="#3_rooms_au_geraeteraum.html"
+                         data-load="#rooms_au_geraeteraum" data-off-background-color="transparent"
+                         data-off-color="#606060" data-on-background-color="#606060" data-on-color="#222222"
+                         data-active-pattern=".*#3_rooms_au_geraeteraum.html" data-icon="oa-control_building_control"
+                         class="top-space"></div>
+                    <div data-type="label" class="darker">Geräte</div>
+                </div>
+            </li>
+            <li data-row="1" data-col="2" data-sizex="12" data-sizey="9">
+                <div class="page" id="rooms_au_garage"></div>
+                <div class="page" id="rooms_au_garten"></div>
+                <div class="page" id="rooms_au_abstellraum"></div>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
